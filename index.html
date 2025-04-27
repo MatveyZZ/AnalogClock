@@ -1,40 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Объявляет тип документа как HTML5 -->
+<html lang="en"> <!-- Открывает элемент html и устанавливает язык документа на английский -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Analog Clock</title>
+    <meta charset="UTF-8"> <!-- Устанавливает кодировку документа на UTF-8 для поддержки различных символов -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Указывает Internet Explorer использовать последнюю версию рендеринга -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Устанавливает параметры для адаптивного дизайна на мобильных устройствах -->
+    <link rel="stylesheet" href="style.css"> <!-- Подключает внешний файл стилей (CSS) для оформления страницы -->
+    <title>Analog Clock</title> <!-- Устанавливает заголовок страницы, который отображается на вкладке браузера -->
 </head>
+
 <body>
     
-    <div class="container">
-        <div class="circle"></div>
-        <div class="circle"></div>
+    <div class="container"> <!-- Создает контейнер для всех элементов часов -->
+        <div class="circle"></div> <!-- Создает первый круг (может быть для оформления) -->
+        <div class="circle"></div> <!-- Создает второй круг (может быть для оформления) -->
 
-        <div class="clock">
+        <div class="clock"> <!-- Создает контейнер для часов -->
 
-            <div class="clock-bg">
-                <img src="clock.png" alt="">
+            <div class="clock-bg"> <!-- Создает контейнер для фона часов -->
+                <img src="clock.png" alt=""> <!-- Вставляет изображение фона часов -->
             </div>
 
-            <div class="hour">
-                <span class="hr" id="hr"></span>
+            <div class="hour"> <!-- Создает контейнер для часовой стрелки -->
+                <span class="hr" id="hr"></span> <!-- Элемент для отображения часовой стрелки -->
             </div>
 
-            <div class="minute">
-                <span class="min" id="min"></span>
+            <div class="minute"> <!-- Создает контейнер для минутной стрелки -->
+                <span class="min" id="min"></span> <!-- Элемент для отображения минутной стрелки -->
             </div>
 
-            <div class="second">
-                <span class="sec" id="sec"></span>
+            <div class="second"> <!-- Создает контейнер для секундной стрелки -->
+                <span class="sec" id="sec"></span> <!-- Элемент для отображения секундной стрелки -->
             </div>
 
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Подключает внешний файл JavaScript для добавления функциональности на страницу -->
 
 </body>
 </html>

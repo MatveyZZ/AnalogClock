@@ -1,17 +1,17 @@
-const dergee = 6;
-const hr = document.querySelector('#hr');
-const min = document.querySelector('#min');
-const sec = document.querySelector('#sec');
+const dergee = 6; // Устанавливает значение переменной dergee, равное 6, что соответствует углу поворота для каждой минуты (360° / 60 минут)
 
-setInterval(() => {
+const hr = document.querySelector('#hr'); // Получает элемент с идентификатором 'hr' (часовая стрелка) из документа
+const min = document.querySelector('#min'); // Получает элемент с идентификатором 'min' (минутная стрелка) из документа
+const sec = document.querySelector('#sec'); // Получает элемент с идентификатором 'sec' (секундная стрелка) из документа
 
-    const date = new Date();
-    const hh = date.getHours() * 30;
-    const mm = date.getMinutes() * dergee;
-    const ss = date.getSeconds() * dergee;
+setInterval(() => { // Устанавливает интервал для выполнения функции каждые 1000 миллисекунд (1 секунда)
+    
+    const date = new Date(); // Создает новый объект Date, который содержит текущую дату и время
+    const hh = date.getHours() * 30; // Получает текущий час и умножает его на 30 (360° / 12 часов) для вычисления угла поворота часовой стрелки
+    const mm = date.getMinutes() * dergee; // Получает текущие минуты и умножает их на dergee (6) для вычисления угла поворота минутной стрелки
+    const ss = date.getSeconds() * dergee; // Получает текущие секунды и умножает их на dergee (6) для вычисления угла поворота секундной стрелки
 
-    hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
-    min.style.transform = `rotateZ(${mm}deg)`;
-    sec.style.transform = `rotateZ(${ss}deg)`;
-
+    hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`; // Устанавливает стиль поворота часовой стрелки, добавляя угол, соответствующий минутам
+    min.style.transform = `rotateZ(${mm}deg)`; // Устанавливает стиль поворота минутной стрелки
+    sec.style.transform = `rotateZ(${ss}deg)`; // Устанавливает стиль поворота секундной стрелки
 });
